@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Stocks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add Stocks to Products</h1>
+    <form id="addStockForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" required>
+        <button type="submit">Add Stocks</button>
+    </form>
+
+    <script>
+        document.getElementById('addStockForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const productName = document.getElementById('productName').value;
+            const quantity = parseInt(document.getElementById('quantity').value);
+
+            // Check if the quantity is a positive integer
+            if (quantity > 0) {
+                // Create a new stock object
+                const newStock = {
+                    name: productName,
+                    quantity: quantity
+                };
+
+                // Emit a custom event 'stockAdded' with the new stock information
+                const stockAddedEvent = new CustomEvent('stockAdded', { detail: newStock });
+                window.dispatchEvent(stockAddedEvent);
+
+                // Clear the form fields
+                document.getElementById('productName').value = '';
+                document.getElementById('quantity').value = '';
+            } else {
+                alert('Please enter a valid quantity.');
+            }
+        });
+    </script>
+</body>
+</html>

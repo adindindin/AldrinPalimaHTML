@@ -1,0 +1,88 @@
+.certOfReg, .Bill {
+    font-size: 15px; 
+    text-align: center;
+    background-color: maroon;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px; 
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#heading{
+    margin-top: 150px;
+    text-align: center;
+    color: maroon;
+    position: relative;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+	font-size: 20px;
+	text-align: center;
+}
+table, th, td {
+    border-collapse:collapse;
+    border: 1.8px solid maroon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+td {
+    border: none;
+}
+.leftlogo {
+    position: absolute;
+    top: 0%;
+    width: 130px;
+    height: auto;
+    transform: translateY(-75%);
+    left: 0;
+}
+.rightlogo {
+    position: absolute;
+    top: -30%;
+    width: 130px;
+    height: auto;
+    transform: translateX(-10%);
+    right: 0;
+}
+.redfont{
+    color: maroon;
+}
+.table,th{
+    border-collapse:collapse;
+    border: 1.8px solid maroon;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.subs{
+    background-color: rgb(240, 240, 63);
+}
+.container1{
+    width: 100%;
+    height: auto;
+}
+.container2{
+    width: 100%;
+    height: auto;
+}
+p{
+    text-align:center;
+    color: maroon;
+    
+}
+.left-align{
+    float: left;
+     color: maroon;
+     width:45%;    
+   
+}
+.right-align{
+    float: left;
+     color: maroon;
+     width: 55%;
+     height: 60%;
+     
+}
